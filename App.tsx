@@ -20,6 +20,11 @@ import Home from './src/react-native-elements/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+//PARCIAL
+import ComponenteParcial01 from './src/primera-parcial/ComponentesParcial01';
+import PropsParcial02 from './src/primera-parcial/PropsParcial02';
+import AxiosParcial03 from './src/primera-parcial/AxiosParcial03';
+import AsyncStorageParcial04 from './src/primera-parcial/AsyncStorageParcial04';
 
 //Esta constante es necesaria para la navegacion
 const Stack = createNativeStackNavigator();
@@ -31,7 +36,14 @@ const App = () => {
       //<BasicComponents></BasicComponents>
 
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='ComponenteParcial01'>
+
+        <Stack.Screen name="ComponenteParcial01" component={ComponenteParcial01} />
+        <Stack.Screen name="PropsParcial02" component={PropsParcial02} />
+        <Stack.Screen name="AxiosParcial03" component={AxiosParcial03} />
+        <Stack.Screen name="AsyncStorageParcial04" component={AsyncStorageParcial04} />
+
+
             <Stack.Screen name='Home' component={Home} />
             <Stack.Screen name='Basic' component={BasicComponents} />
             <Stack.Screen name='Text' component={TextComponents} />
@@ -45,8 +57,6 @@ const App = () => {
    // </ScrollView>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   
